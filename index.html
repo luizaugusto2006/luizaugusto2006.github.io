@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luiz Augusto — Desenvolvedor Full Stack</title>
+  <meta name="description" content="Portfólio de Luiz Augusto, desenvolvedor Full Stack Python/Django. Sistemas web, sites e automação.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#inicio" class="logo">&lt;LA /&gt;</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#contato" class="nav-cta">Contato</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="container hero-inner">
+      <div class="hero-badge">Disponível para novos projetos</div>
+      <h1>Olá, eu sou <span class="highlight">Luiz Augusto</span></h1>
+      <p class="hero-sub">Desenvolvedor Full Stack <strong>Python &amp; Django</strong>. Crio sistemas web completos, sites profissionais e automações que resolvem problemas reais.</p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+        <a href="#contato" class="btn btn-outline">Entrar em contato</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>5+</strong><span>Sistemas desenvolvidos</span></div>
+        <div class="stat"><strong>3</strong><span>Projetos publicados no GitHub</span></div>
+        <div class="stat"><strong>2</strong><span>Aplicações no ar</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section" id="sobre">
+    <div class="container">
+      <span class="section-tag">Sobre mim</span>
+      <h2 class="section-title">Desenvolvo soluções de ponta a ponta</h2>
+      <div class="sobre-grid">
+        <div>
+          <p>Atuo com desenvolvimento web Full Stack, do banco de dados à interface. Construo sistemas de gestão para negócios reais — controle financeiro, gestão de processos, carteiras de crédito — e sites institucionais prontos para colocar o cliente no ar.</p>
+          <p>Meu foco é entregar <strong>código limpo, sistemas funcionais e resultados que o cliente enxerga</strong>.</p>
+        </div>
+        <ul class="sobre-lista">
+          <li>✔️ Sistemas web em <strong>Django</strong> e <strong>Flask</strong></li>
+          <li>✔️ Sites institucionais e landing pages</li>
+          <li>✔️ Automação de rotinas e planilhas</li>
+          <li>✔️ Deploy em PythonAnywhere, Render e GitHub Pages</li>
+          <li>✔️ Bancos de dados SQLite e PostgreSQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="section section-dark" id="projetos">
+    <div class="container">
+      <span class="section-tag">Portfólio</span>
+      <h2 class="section-title">Projetos em destaque</h2>
+      <div class="filtros" id="filtros">
+        <button class="filtro ativo" data-filtro="todos">Todos</button>
+        <button class="filtro" data-filtro="django">Django</button>
+        <button class="filtro" data-filtro="flask">Flask</button>
+        <button class="filtro" data-filtro="site">Sites</button>
+      </div>
+
+      <div class="projetos-grid">
+
+        <article class="card" data-categorias="django">
+          <div class="card-top">
+            <span class="card-icon">💰</span>
+            <div class="card-links">
+              <a href="https://github.com/luizaugusto2006/sistema_emprestimos" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Sistema de Gerenciamento de Empréstimos</h3>
+          <p>Controle completo de carteira de crédito: contratos, geração automática de parcelas, baixa de pagamentos, multas por atraso, renegociação de dívidas, relatórios e auditoria.</p>
+          <div class="tags"><span>Django</span><span>Python</span><span>SQLite</span><span>Bootstrap</span></div>
+        </article>
+
+        <article class="card" data-categorias="django">
+          <div class="card-top">
+            <span class="card-icon">⚖️</span>
+            <div class="card-links">
+              <a href="https://github.com/luizaugusto2006/Adv-RicardoLima" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Gestão de Escritório de Advocacia</h3>
+          <p>Sistema para escritório de advocacia: cadastro de advogados, clientes, juízes e fóruns, controle de processos com andamentos, painel analítico e relatórios por cliente/advogado.</p>
+          <div class="tags"><span>Django</span><span>Python</span><span>SQLite</span></div>
+        </article>
+
+        <article class="card" data-categorias="django site">
+          <div class="card-top">
+            <span class="card-icon">⚽</span>
+            <div class="card-links">
+              <a href="https://luizinho.pythonanywhere.com" target="_blank" rel="noopener" title="Ver no ar">Demo ao vivo</a>
+              <a href="https://github.com/luizaugusto2006/site_atleta" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Site de Atleta de Futebol</h3>
+          <p>Site profissional para atleta: perfil com atributos técnicos, galeria de fotos, histórico de clubes, vídeo de destaques e painel administrativo.</p>
+          <div class="tags"><span>Django</span><span>Python</span><span>Bootstrap</span><span>Deploy</span></div>
+        </article>
+
+        <article class="card" data-categorias="flask">
+          <div class="card-top">
+            <span class="card-icon">📊</span>
+            <div class="card-links">
+              <a href="https://github.com/luizaugusto2006/ContabilBS" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>ContabilBS — Controle Financeiro</h3>
+          <p>Controle financeiro mensal de empresa de táxi: lançamentos, categorias, fechamento de meses, relatórios de saldos, gráficos e exportação CSV.</p>
+          <div class="tags"><span>Flask</span><span>Python</span><span>Chart.js</span></div>
+        </article>
+
+        <article class="card" data-categorias="flask site">
+          <div class="card-top">
+            <span class="card-icon">🐟</span>
+            <div class="card-links">
+              <a href="https://peixotinhos.pythonanywhere.com" target="_blank" rel="noopener" title="Ver no ar">Demo ao vivo</a>
+              <a href="https://github.com/luizaugusto2006/Peixotinhos" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Peixotinhos — Site de Peixaria</h3>
+          <p>Site institucional para peixaria com página "Sobre", galeria de eventos, upload de fotos e painel administrativo completo com gestão de usuários.</p>
+          <div class="tags"><span>Flask</span><span>SQLAlchemy</span><span>Flask-Login</span><span>Deploy</span></div>
+        </article>
+
+        <article class="card" data-categorias="site">
+          <div class="card-top">
+            <span class="card-icon">🚕</span>
+            <div class="card-links">
+              <a href="https://github.com/luizaugusto2006/Home-Barrasul" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Home Barrasul Taxi</h3>
+          <p>Landing page para empresa de táxi com apresentação dos serviços, frota e vídeo promocional.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </article>
+
+        <article class="card" data-categorias="site">
+          <div class="card-top">
+            <span class="card-icon">🧵</span>
+            <div class="card-links">
+              <a href="https://github.com/luizaugusto2006/Atelie-da-Dri" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Ateliê da Dri — Loja Online</h3>
+          <p>E-commerce de artesanato com catálogo de produtos, imagens e estrutura pronta para vendas.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </article>
+
+        <article class="card" data-categorias="site">
+          <div class="card-top">
+            <span class="card-icon">🏛️</span>
+            <div class="card-links">
+              <a href="https://github.com/luizaugusto2006/Site-Advocacia" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Site Advocacia Ricardo Lima</h3>
+          <p>Site institucional para escritório de advocacia com apresentação profissional da equipe e áreas de atuação.</p>
+          <div class="tags"><span>HTML</span><span>CSS</span></div>
+        </article>
+
+        <article class="card" data-categorias="site">
+          <div class="card-top">
+            <span class="card-icon">🛠️</span>
+            <div class="card-links">
+              <a href="https://github.com/luizaugusto2006/Otimizador" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+            </div>
+          </div>
+          <h3>Otimizador de Sistema (PowerShell)</h3>
+          <p>Script de manutenção e otimização do Windows: limpeza de arquivos temporários, cache e ajustes de desempenho.</p>
+          <div class="tags"><span>PowerShell</span><span>Automação</span></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="section" id="habilidades">
+    <div class="container">
+      <span class="section-tag">Habilidades</span>
+      <h2 class="section-title">Tecnologias que domino</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><span class="skill-icon">🐍</span><strong>Python</strong></div>
+        <div class="skill-item"><span class="skill-icon">🎯</span><strong>Django</strong></div>
+        <div class="skill-item"><span class="skill-icon">🧪</span><strong>Flask</strong></div>
+        <div class="skill-item"><span class="skill-icon">🗄️</span><strong>SQLite / PostgreSQL</strong></div>
+        <div class="skill-item"><span class="skill-icon">🌐</span><strong>HTML / CSS / JS</strong></div>
+        <div class="skill-item"><span class="skill-icon">📈</span><strong>Power BI</strong></div>
+        <div class="skill-item"><span class="skill-icon">🔄</span><strong>Git &amp; GitHub</strong></div>
+        <div class="skill-item"><span class="skill-icon">🚀</span><strong>Deploy &amp; DevOps básico</strong></div>
+        <div class="skill-item"><span class="skill-icon">🤖</span><strong>Automação</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section section-dark" id="contato">
+    <div class="container contato-inner">
+      <span class="section-tag">Contato</span>
+      <h2 class="section-title">Vamos conversar sobre o seu projeto?</h2>
+      <p class="contato-text">Precisa de um sistema, um site ou uma automação para o seu negócio? Vamos tirar sua ideia do papel.</p>
+      <div class="contato-buttons">
+        <a class="btn btn-primary btn-whatsapp" href="https://wa.me/55SEU_NUMERO" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-outline" href="https://github.com/luizaugusto2006" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="ano"></span> Luiz Augusto — Desenvolvedor Full Stack</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
