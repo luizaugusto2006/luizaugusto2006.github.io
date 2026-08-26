@@ -466,3 +466,58 @@ body {
     gap: 30px;
   }
 }
+
+/* SERVIÇOS */
+.servicos-subtitle {
+  text-align: center;
+  color: var(--text-dim);
+  max-width: 700px;
+  margin: -10px auto 40px;
+  font-size: 1.05rem;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.servico-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.servico-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+}
+
+.servico-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.servico-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.servico-card p {
+  color: var(--text-dim);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.servicos-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
