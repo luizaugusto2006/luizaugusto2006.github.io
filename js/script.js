@@ -72,27 +72,33 @@ backToTop.addEventListener('click', () => {
 // Formulário de contato (Formspree)
 const formContato = document.getElementById('formContato');
 if (formContato) {
-  formContato.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const status = document.getElementById('formStatus');
-    const data = new FormData(formContato);
-    fetch(formContato.action, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
+formContato.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const status = document.getElementById('formStatus');
+  const data = new FormData(formContato);
+  const nome = (data.get('nome') || '').toString();
+  const email = (data.get('email') || '').toString();
+  const mensagem = (data.get('mensagem') || '').toString();
+  const mailto = 'mailto:luizaugusto2006@gmail.com?subject=' +
+    encodeURIComponent('Contato via Portfólio - ' + nome) +
+    '&body=' + encodeURIComponent(mensagem + '\n\nDe: ' + nome + ' (' + email + ')');
+  fetch(formContato.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  })
+    .then((r) => {
+      if (r.ok) {
+        status.textContent = 'Mensagem enviada! Entrarei em contato em breve.';
+        status.classList.remove('erro');
+        formContato.reset();
+      } else {
+        throw new Error();
+      }
     })
-      .then((r) => {
-        if (r.ok) {
-          status.textContent = 'Mensagem enviada! Entrarei em contato em breve.';
-          status.classList.remove('erro');
-          formContato.reset();
-        } else {
-          throw new Error();
-        }
-      })
-      .catch(() => {
-        status.textContent = 'Não foi possível enviar agora. Tente pelo WhatsApp ou e-mail.';
-        status.classList.add('erro');
-      });
-  });
+    .catch(() => {
+      status.innerHTML = 'Não foi possível enviar pelo formulário. <a href="' + mailto + '">Clique para enviar por e-mail</a> ou use o WhatsApp.';
+      status.classList.add('erro');
+    });
+});
 }
