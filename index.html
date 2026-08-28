@@ -5,11 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luiz Augusto — Desenvolvedor Full Stack</title>
   <meta name="description" content="Portfólio de Luiz Augusto, desenvolvedor Full Stack Python/Django. Sistemas web, sites e automação.">
+  <meta name="theme-color" content="#0b1220">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Luiz Augusto — Desenvolvedor Full Stack">
+  <meta property="og:description" content="Desenvolvedor Full Stack Python &amp; Django. Sistemas web, sites e automação.">
+  <meta property="og:url" content="https://luizaugusto2006.github.io/">
+  <meta property="og:image" content="https://luizaugusto2006.github.io/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Luiz Augusto — Desenvolvedor Full Stack">
+  <meta name="twitter:description" content="Desenvolvedor Full Stack Python &amp; Django. Sistemas web, sites e automação.">
+  <meta name="twitter:image" content="https://luizaugusto2006.github.io/img/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+  <script>
+    (function () {
+      var t = localStorage.getItem('tema');
+      if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Luiz Augusto",
+    "jobTitle": "Desenvolvedor Full Stack Python/Django",
+    "url": "https://luizaugusto2006.github.io/",
+    "image": "https://luizaugusto2006.github.io/img/og-image.png",
+    "email": "mailto:luizaugusto2006@gmail.com",
+    "sameAs": [
+      "https://github.com/luizaugusto2006",
+      "https://www.linkedin.com/in/SEU_LINKEDIN",
+      "https://www.solinfos.com.br"
+    ],
+    "description": "Desenvolvedor Full Stack Python/Django com mais de 20 anos de experiência em TI. Sistemas web, sites e automação."
+  }
+  </script>
 </head>
 <body>
 
@@ -26,9 +61,10 @@
         <a href="#curriculo">Currículo</a>
         <a href="#contato" class="nav-cta">Contato</a>
       </nav>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema claro/escuro">🌙</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
     </div>
   </header>
 
@@ -123,6 +159,7 @@
       <div class="projetos-grid">
 
         <article class="card" data-categorias="django">
+          <img class="card-thumb" src="img/projetos/emprestimos.svg" alt="Sistema de Gerenciamento de Empréstimos" loading="lazy">
           <div class="card-top">
             <span class="card-icon">💰</span>
             <div class="card-links">
@@ -136,6 +173,7 @@
         </article>
 
         <article class="card" data-categorias="django">
+          <img class="card-thumb" src="img/projetos/adv.svg" alt="Gestão de Escritório de Advocacia" loading="lazy">
           <div class="card-top">
             <span class="card-icon">⚖️</span>
             <div class="card-links">
@@ -149,6 +187,7 @@
         </article>
 
         <article class="card" data-categorias="django site">
+          <img class="card-thumb" src="img/projetos/atleta.svg" alt="Site de Atleta de Futebol" loading="lazy">
           <div class="card-top">
             <span class="card-icon">⚽</span>
             <div class="card-links">
@@ -162,6 +201,7 @@
         </article>
 
         <article class="card" data-categorias="flask">
+          <img class="card-thumb" src="img/projetos/contabilbs.svg" alt="ContabilBS — Controle Financeiro" loading="lazy">
           <div class="card-top">
             <span class="card-icon">📊</span>
             <div class="card-links">
@@ -175,6 +215,7 @@
         </article>
 
         <article class="card" data-categorias="flask site">
+          <img class="card-thumb" src="img/projetos/peixotinhos.svg" alt="Peixotinhos — Site de Fotos do Colégio" loading="lazy">
           <div class="card-top">
             <span class="card-icon">🐟</span>
             <div class="card-links">
@@ -188,6 +229,7 @@
         </article>
 
         <article class="card" data-categorias="site">
+          <img class="card-thumb" src="img/projetos/denise.svg" alt="Evento 70 Anos Denise" loading="lazy">
           <div class="card-top">
             <span class="card-icon">🎂</span>
             <div class="card-links">
@@ -200,6 +242,7 @@
         </article>
 
         <article class="card" data-categorias="site">
+          <img class="card-thumb" src="img/projetos/barrasul.svg" alt="Home Barrasul Taxi" loading="lazy">
           <div class="card-top">
             <span class="card-icon">🚕</span>
             <div class="card-links">
@@ -213,6 +256,7 @@
         </article>
 
         <article class="card" data-categorias="site">
+          <img class="card-thumb" src="img/projetos/solinfos.svg" alt="Site Pessoal SolInfos" loading="lazy">
           <div class="card-top">
             <span class="card-icon">🌐</span>
             <div class="card-links">
@@ -225,6 +269,7 @@
         </article>
 
         <article class="card" data-categorias="site">
+          <img class="card-thumb" src="img/projetos/atelie.svg" alt="Ateliê da Dri — Loja Online" loading="lazy">
           <div class="card-top">
             <span class="card-icon">🧵</span>
             <div class="card-links">
@@ -237,6 +282,7 @@
         </article>
 
         <article class="card" data-categorias="site">
+          <img class="card-thumb" src="img/projetos/advocacia-site.svg" alt="Site Advocacia Ricardo Lima" loading="lazy">
           <div class="card-top">
             <span class="card-icon">🏛️</span>
             <div class="card-links">
@@ -249,6 +295,7 @@
         </article>
 
         <article class="card" data-categorias="site">
+          <img class="card-thumb" src="img/projetos/otimizador.svg" alt="Otimizador de Sistema (PowerShell)" loading="lazy">
           <div class="card-top">
             <span class="card-icon">🛠️</span>
             <div class="card-links">
@@ -260,6 +307,37 @@
           <div class="tags"><span>PowerShell</span><span>Automação</span></div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="section" id="depoimentos">
+    <div class="container">
+      <span class="section-tag">Depoimentos</span>
+      <h2 class="section-title">Quem já trabalhou comigo</h2>
+      <div class="depoimentos-grid">
+        <div class="depoimento-card">
+          <p class="depoimento-text">"Substitua este texto por um depoimento real de um cliente satisfeito com seu trabalho."</p>
+          <div class="depoimento-autor">
+            <span class="depoimento-avatar">🧑‍💼</span>
+            <div><strong>Nome do Cliente</strong><span>Cargo / Empresa</span></div>
+          </div>
+        </div>
+        <div class="depoimento-card">
+          <p class="depoimento-text">"Substitua este texto por um segundo depoimento, destacando resultados entregues."</p>
+          <div class="depoimento-autor">
+            <span class="depoimento-avatar">👩‍💻</span>
+            <div><strong>Nome do Cliente 2</strong><span>Cargo / Empresa</span></div>
+          </div>
+        </div>
+        <div class="depoimento-card">
+          <p class="depoimento-text">"Substitua este texto por um terceiro depoimento, reforçando confiança e qualidade."</p>
+          <div class="depoimento-autor">
+            <span class="depoimento-avatar">🧑‍🔧</span>
+            <div><strong>Nome do Cliente 3</strong><span>Cargo / Empresa</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -302,9 +380,20 @@
       <span class="section-tag">Contato</span>
       <h2 class="section-title">Vamos conversar sobre o seu projeto?</h2>
       <p class="contato-text">Precisa de um sistema, um site, manutenção ou suporte técnico? Vamos tirar sua ideia do papel.</p>
+      <form id="formContato" class="contato-form" action="https://formspree.io/f/SEU_FORM_ID" method="POST">
+        <input type="hidden" name="_subject" value="Contato via Portfólio">
+        <div class="form-row">
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+        </div>
+        <textarea name="mensagem" placeholder="Sua mensagem" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+      </form>
       <div class="contato-buttons">
         <a class="btn btn-primary btn-whatsapp" href="https://wa.me/5521970088404" target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn btn-outline" href="mailto:luizaugusto2006@gmail.com">E-mail</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/SEU_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-outline" href="https://github.com/luizaugusto2006" target="_blank" rel="noopener">GitHub</a>
         <a class="btn btn-outline" href="https://www.solinfos.com.br" target="_blank" rel="noopener">SolInfos</a>
       </div>
@@ -317,6 +406,8 @@
     </div>
   </footer>
 
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
   <script src="js/script.js"></script>
 </body>
 </html>

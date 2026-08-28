@@ -305,7 +305,8 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 26px;
+  padding: 0;
+  overflow: hidden;
   transition: transform 0.2s, border-color 0.2s;
 }
 
@@ -314,11 +315,19 @@ body {
   border-color: var(--primary);
 }
 
+.card-thumb {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
 .card-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 16px;
+  padding: 22px 26px 0;
 }
 
 .card-icon {
@@ -350,18 +359,21 @@ body {
 .card h3 {
   font-size: 1.15rem;
   margin-bottom: 10px;
+  padding: 0 26px;
 }
 
 .card p {
   color: var(--text-dim);
   font-size: 0.92rem;
   margin-bottom: 18px;
+  padding: 0 26px;
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  padding: 0 26px 26px;
 }
 
 .tags span {
@@ -520,4 +532,198 @@ body {
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* TEMA CLARO */
+:root[data-theme="light"] {
+  --bg: #f5f7fb;
+  --bg-alt: #eaeef6;
+  --bg-card: #ffffff;
+  --border: #d4dcea;
+  --text: #11203a;
+  --text-dim: #5a6b8c;
+}
+
+:root[data-theme="light"] .navbar {
+  background: rgba(245, 247, 251, 0.88);
+}
+
+:root[data-theme="light"] .nav-links a {
+  color: var(--text-dim);
+}
+
+:root[data-theme="light"] .nav-links a:hover {
+  color: var(--text);
+}
+
+:root[data-theme="light"] .menu-toggle span {
+  background: var(--text);
+}
+
+/* TOGGLE DE TEMA */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: grid;
+  place-items: center;
+  transition: border-color 0.2s, transform 0.15s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+/* DEPOIMENTOS */
+.depoimentos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.depoimento-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.depoimento-text {
+  color: var(--text-dim);
+  font-size: 0.98rem;
+  font-style: italic;
+  flex: 1;
+}
+
+.depoimento-autor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.depoimento-avatar {
+  font-size: 1.8rem;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  background: rgba(79, 140, 255, 0.12);
+  border-radius: 50%;
+}
+
+.depoimento-autor strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.depoimento-autor span {
+  color: var(--text-dim);
+  font-size: 0.82rem;
+}
+
+/* FORMULÁRIO DE CONTATO */
+.contato-form {
+  max-width: 620px;
+  margin: 0 auto 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.form-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.contato-form input:focus,
+.contato-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.contato-form textarea {
+  resize: vertical;
+}
+
+.form-status {
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  color: var(--accent);
+}
+
+.form-status.erro {
+  color: #ff6b6b;
+}
+
+/* VOLTAR AO TOPO + BARRA DE PROGRESSO */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  z-index: 60;
+  transition: width 0.1s;
+}
+
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s, background 0.2s;
+  z-index: 55;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 820px) {
+  .form-row {
+    flex-direction: column;
+  }
 }

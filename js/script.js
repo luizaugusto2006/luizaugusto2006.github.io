@@ -37,3 +37,62 @@ filtros.forEach((filtro) => {
 
 // Ano do rodapé
 document.getElementById('ano').textContent = new Date().getFullYear();
+
+// Toggle de tema claro/escuro
+const themeToggle = document.getElementById('themeToggle');
+function atualizaIconeTema() {
+  themeToggle.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '☀️' : '🌙';
+}
+atualizaIconeTema();
+themeToggle.addEventListener('click', () => {
+  const claro = document.documentElement.getAttribute('data-theme') === 'light';
+  if (claro) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('tema', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('tema', 'light');
+  }
+  atualizaIconeTema();
+});
+
+// Voltar ao topo + barra de progresso
+const backToTop = document.getElementById('backToTop');
+const progress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const docH = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = docH > 0 ? (window.scrollY / docH) * 100 : 0;
+  progress.style.width = pct + '%';
+  backToTop.classList.toggle('visible', window.scrollY > 400);
+});
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Formulário de contato (Formspree)
+const formContato = document.getElementById('formContato');
+if (formContato) {
+  formContato.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const status = document.getElementById('formStatus');
+    const data = new FormData(formContato);
+    fetch(formContato.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+      .then((r) => {
+        if (r.ok) {
+          status.textContent = 'Mensagem enviada! Entrarei em contato em breve.';
+          status.classList.remove('erro');
+          formContato.reset();
+        } else {
+          throw new Error();
+        }
+      })
+      .catch(() => {
+        status.textContent = 'Não foi possível enviar agora. Tente pelo WhatsApp ou e-mail.';
+        status.classList.add('erro');
+      });
+  });
+}
