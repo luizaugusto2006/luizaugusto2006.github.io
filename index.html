@@ -24,6 +24,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
   <script>
     (function () {
+      document.documentElement.classList.add('js');
       var t = localStorage.getItem('tema');
       if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
     })();
@@ -47,6 +48,7 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -87,7 +89,7 @@
   </section>
 
   <!-- SOBRE -->
-  <section class="section" id="sobre">
+  <section class="section reveal" id="sobre">
     <div class="container">
       <span class="section-tag">Sobre mim</span>
       <h2 class="section-title">Desenvolvo soluções de ponta a ponta</h2>
@@ -110,7 +112,7 @@
   </section>
 
   <!-- SERVIÇOS -->
-  <section class="section section-dark" id="servicos">
+  <section class="section section-dark reveal" id="servicos">
     <div class="container">
       <span class="section-tag">Serviços</span>
       <h2 class="section-title">SolInfos - Soluções em Informática</h2>
@@ -145,7 +147,7 @@
   </section>
 
   <!-- PROJETOS -->
-  <section class="section section-dark" id="projetos">
+  <section class="section section-dark reveal" id="projetos">
     <div class="container">
       <span class="section-tag">Portfólio</span>
       <h2 class="section-title">Projetos em destaque</h2>
@@ -312,7 +314,7 @@
   </section>
 
   <!-- DEPOIMENTOS -->
-  <section class="section" id="depoimentos">
+  <section class="section reveal" id="depoimentos">
     <div class="container">
       <span class="section-tag">Depoimentos</span>
       <h2 class="section-title">Quem já trabalhou comigo</h2>
@@ -343,7 +345,7 @@
   </section>
 
   <!-- HABILIDADES -->
-  <section class="section" id="habilidades">
+  <section class="section reveal" id="habilidades">
     <div class="container">
       <span class="section-tag">Habilidades</span>
       <h2 class="section-title">Tecnologias que domino</h2>
@@ -362,7 +364,7 @@
   </section>
 
   <!-- CURRÍCULO -->
-  <section class="section section-dark" id="curriculo">
+  <section class="section section-dark reveal" id="curriculo">
     <div class="container contato-inner">
       <span class="section-tag">Currículo</span>
       <h2 class="section-title">Baixe meu currículo</h2>
@@ -375,7 +377,7 @@
   </section>
 
   <!-- CONTATO -->
-  <section class="section section-dark" id="contato">
+  <section class="section section-dark reveal" id="contato">
     <div class="container contato-inner">
       <span class="section-tag">Contato</span>
       <h2 class="section-title">Vamos conversar sobre o seu projeto?</h2>

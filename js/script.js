@@ -38,6 +38,19 @@ filtros.forEach((filtro) => {
 // Ano do rodapé
 document.getElementById('ano').textContent = new Date().getFullYear();
 
+// Animação de entrada das seções
+if (document.documentElement.classList.contains('js')) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+}
+
 // Toggle de tema claro/escuro
 const themeToggle = document.getElementById('themeToggle');
 function atualizaIconeTema() {
